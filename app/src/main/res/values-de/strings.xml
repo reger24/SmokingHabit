@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smoking Habit</string>
+    <string name="minutes">Minuten</string>
+    <string name="day">Tag</string>
+    <string name="month">Monat</string>
+    <string name="all">Alle</string>
+    <string name="count_today">Anzahl Heute</string>
+    <string name="count_last24h">Anzahl letzte 24 h</string>
+    <string name="smoke_free_time">rauchfreie Zeit</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="home">Start</string>
+    <string name="latest_log_entries">letzte Einträge</string>
+    <string name="log_entry_added">Eintrag wurde hinzugefügt</string>
+    <string name="log_entry_not_added">wahrscheinlich eine Doppeleintrag, warte ein paar Sekunden um Eintrag zu registrieren</string>
+    <string name="smokenow">Log Rauchen</string>
+    <string name="action_charts">Diagramme</string>
+    <string name="day_statistic">Statistik Tag   (von 1 Monat)</string>
+    <string name="monthly_statistic">Statistik Monat</string>
+    <string name="all_statistic">Statistik Alle</string>
+    <string name="hour_of_day">Uhrzeit</string>
+    <string name="day_of_month">Tag des Monats</string>
+    <string name="day_of_all">Tag von alle</string>
+    <string name="language">Sprache</string>
+    <string name="key_figures">Kennwerte</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Nachrichten</string>
+
+</resources>

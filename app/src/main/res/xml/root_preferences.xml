@@ -1,0 +1,42 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Target Goals">
+
+        <EditTextPreference
+            android:defaultValue="20"
+            android:digits="0123456789"
+            android:key="smoke24hlimit"
+            android:summary="current value"
+            android:title="Limit 24 h" />
+        <EditTextPreference
+            android:defaultValue="30"
+            android:digits="0123456789"
+            android:key="nextsmokeminlimit"
+            android:summary="current value"
+            android:singleLine="true"
+            android:title="Next Smoke Limit (min)" />
+    </PreferenceCategory>
+
+<PreferenceCategory app:title="App Behavior">
+
+    <SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="closeonlog"
+        android:title="Close screen on log" />
+
+    <EditTextPreference
+        android:defaultValue="60"
+        android:digits="0123456789"
+        android:key="doubleclickdelay"
+        android:summary="current value"
+        android:title="Double input delay (s)" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/language_names"
+        android:entryValues="@array/language_names"
+        android:key="list_language"
+        android:title="@string/language" />
+
+</PreferenceCategory>
+</PreferenceScreen>

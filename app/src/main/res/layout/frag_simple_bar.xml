@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+      <!-- We add the chart programmatically here. See BarChartFrag.java -->
+
+      <LinearLayout
+          android:id="@+id/bottonrow"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="false"
+          android:layout_alignParentBottom="true"
+          android:orientation="horizontal">
+            <include layout="@layout/fragment_buttonbar"/>
+      </LinearLayout>
+</FrameLayout>

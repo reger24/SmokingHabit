@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Smoking Habit</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="smokenow">Log Smoking</string>
+    <string name="minutes">Minutes</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="count_today">Count today = </string>
+    <string name="count_last24h">Count last 24h = </string>
+    <string name="smoke_free_time">Smoke free time = </string>
+
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="all">All</string>
+    <string name="home">Home</string>
+    <string name="latest_log_entries">latest log entries</string>
+    <string name="log_entry_added">Smoke log entry has been added</string>
+    <string name="log_entry_not_added">likely a double registration, wait some seconds to register next smoke</string>
+    <string name="action_charts">Charts</string>
+    <string name="day_statistic">Day Statistic (of one month)</string>
+    <string name="monthly_statistic">Monthly Statistic</string>
+    <string name="all_statistic">All Statistic</string>
+    <string name="hour_of_day">Hour of day</string>
+    <string name="day_of_month">Day of Month</string>
+    <string name="day_of_all">Day of All</string>
+    <string name="language">Language</string>
+    <string name="title_activity_log_entry_list">Log Entry List Activity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="key_figures">Key Figures</string>
+</resources>
