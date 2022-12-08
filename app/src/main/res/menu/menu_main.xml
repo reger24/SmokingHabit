@@ -9,7 +9,10 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/calcstat"
-        android:title="Calc Stat" />
+        android:checkable="false"
+        android:enabled="false"
+        android:title="Calc Stat"
+        android:visible="false" />
     <item
         android:id="@+id/showchart"
         android:title="@string/action_charts" />
