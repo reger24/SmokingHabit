@@ -6,4 +6,7 @@ Additional the app provides simple statistic for a day or month.
 
 
 ## Screenshot
+<div>
 <img src="https://github.com/reger24/SmokingHabit/raw/4b7238e49fe43fd168adc92d91c84019189bfc38/screenshots/Screenshot_20221207_204719.png" height="200px">
+<img src="https://raw.githubusercontent.com/reger24/SmokingHabit/main/screenshots/Settings_20221208_021204.png" height="200px">
+</div>
