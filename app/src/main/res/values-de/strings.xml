@@ -26,5 +26,16 @@
     <string name="key_figures">Kennwerte</string>
     <string name="title_home">Home</string>
     <string name="title_notifications">Nachrichten</string>
+    <string name="date">Datum</string>
+    <string name="description">Grund</string>
+    <string name="save">Save</string>
+    <string name="next">weiter</string>
+    <string name="previous">zurück</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_activity_log_entry_list">Log Eintrag List Activity</string>
+    <string name="first_fragment_label">Erstes Fragment</string>
+    <string name="second_fragment_label">Zweites Fragment</string>
+    <string name="hello_first_fragment">Hallo erstes Fragment</string>
+    <string name="hello_second_fragment">Hallo zweites Fragment. Arg: %1$s</string>
 
 </resources>

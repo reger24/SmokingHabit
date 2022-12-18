@@ -38,4 +38,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="key_figures">Key Figures</string>
+    <string name="date">Date</string>
+    <string name="description">Reason</string>
+    <string name="save">Save</string>
 </resources>
