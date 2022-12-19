@@ -18,6 +18,7 @@ import java.util.Calendar;
  */
 public class SmokeStatistic {
     final private Context context; // app context (from init)
+    final private String dbName = "SMOKE_LOG.db"; // file name for database
     EasiestDB easiestDB; // Database reference
     long lastsmoketime = -1; // remember last smoke DateTime
     int todaycount = 0; // remember last count for current day
@@ -25,7 +26,7 @@ public class SmokeStatistic {
 
     public SmokeStatistic(Context thecontext) {
         this.context = thecontext;
-        easiestDB = EasiestDB.init(context)
+        easiestDB = EasiestDB.init(context,dbName)
                 .addTableColumns("smokelog",
                         new Column("smoketime", "INTEGER"),
                         new Column("reasontag", "TEXT")
