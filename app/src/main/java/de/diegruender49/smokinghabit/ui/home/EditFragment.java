@@ -12,19 +12,24 @@ import androidx.lifecycle.ViewModelProvider;
 
 import de.diegruender49.smokinghabit.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+public class EditFragment extends Fragment {
 
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        EditViewModel homeViewModel =
+                new ViewModelProvider(this).get(EditViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        final EditText logDate = binding.editLogDate;
+        final EditText logTime = binding.editLogTime;
         final EditText logDesc = binding.editLogDesc;
+
+        homeViewModel.getText().observe(getViewLifecycleOwner(), logDate::setText);
+        homeViewModel.getText().observe(getViewLifecycleOwner(), logTime::setText);
         homeViewModel.getText().observe(getViewLifecycleOwner(), logDesc::setText);
         return root;
     }

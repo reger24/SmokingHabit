@@ -27,12 +27,14 @@ public class PlaceholderContent {
     public static final Map<String, PlaceholderItem> ITEM_MAP = new HashMap<String, PlaceholderItem>();
 
     public static void addItem(PlaceholderItem item) {
-        ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
+        if (!ITEM_MAP.containsKey(item.id)) { // prevent double entry
+            ITEMS.add(item);
+            ITEM_MAP.put(item.id, item);
+        }
     }
 
     public static PlaceholderItem createPlaceholderItem(int position, long aDateTime, String desc) {
-        return new PlaceholderItem(String.valueOf(position), "Item ", aDateTime,desc);
+        return new PlaceholderItem(String.valueOf(position), "", aDateTime,desc);
     }
 
 

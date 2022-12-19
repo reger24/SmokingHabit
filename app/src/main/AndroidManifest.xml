@@ -12,7 +12,6 @@
             android:name=".LogEntryListActivity"
             android:exported="true"
             android:label="@string/title_activity_log_entry_list">
-
         </activity>
 
         <service
