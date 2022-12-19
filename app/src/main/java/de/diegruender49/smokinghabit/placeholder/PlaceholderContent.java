@@ -33,8 +33,8 @@ public class PlaceholderContent {
         }
     }
 
-    public static PlaceholderItem createPlaceholderItem(int position, long aDateTime, String desc) {
-        return new PlaceholderItem(String.valueOf(position), "", aDateTime,desc);
+    public static PlaceholderItem createPlaceholderItem(long sqlId, int position,  long aDateTime, String desc) {
+        return new PlaceholderItem(sqlId, String.valueOf(position), "",  aDateTime,desc);
     }
 
 
@@ -43,13 +43,15 @@ public class PlaceholderContent {
      */
     public static class PlaceholderItem {
         public final String id;
+        private final long sqlId;
         public final String content;
         public final String logDate;
         public final String logTime;
         public final String logDesc;
         private final long logDateTime;
 
-        public PlaceholderItem(String id, String content, long pDateTime, String Desc) {
+        public PlaceholderItem(long sqlId,String id, String content, long pDateTime, String Desc) {
+            this.sqlId = sqlId;
             this.id = id;
             this.content = content;
             this.logDateTime = pDateTime;

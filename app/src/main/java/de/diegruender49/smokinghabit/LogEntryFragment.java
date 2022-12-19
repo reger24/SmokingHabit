@@ -49,14 +49,14 @@ public class LogEntryFragment extends Fragment {
             cal.add(Calendar.HOUR, - (24 * 2));
             SmokeStatistic smstat = new SmokeStatistic(getContext());
             EasiestDB easiestDB = smstat.getDatabase();
-            Cursor cursor = easiestDB.getSelect("SELECT smoketime, reasontag FROM smokelog WHERE smoketime >= " + cal.getTimeInMillis());
+            Cursor cursor = easiestDB.getSelect("SELECT smoketime, reasontag, id FROM smokelog WHERE smoketime >= " + cal.getTimeInMillis());
             EditViewModel homeViewModel =  new ViewModelProvider(requireActivity()).get(EditViewModel.class);
             if (cursor != null && cursor.moveToLast()) {
                 int tmpcnt = 1;
                 do {
                     // remember 1st entry for edit screen
-                    if (tmpcnt == 1) homeViewModel.setEntryData(cursor.getLong(0),cursor.getString(1));
-                    PlaceholderContent.PlaceholderItem item = PlaceholderContent.createPlaceholderItem(tmpcnt++,cursor.getLong(0),cursor.getString(1));
+                    if (tmpcnt == 1) homeViewModel.setEntryData(cursor.getInt(2),cursor.getLong(0),cursor.getString(1));
+                    PlaceholderContent.PlaceholderItem item = PlaceholderContent.createPlaceholderItem(cursor.getLong(2),tmpcnt++,cursor.getLong(0),cursor.getString(1));
                     PlaceholderContent.addItem(item);
                 } while (cursor.moveToPrevious());
                 cursor.close();

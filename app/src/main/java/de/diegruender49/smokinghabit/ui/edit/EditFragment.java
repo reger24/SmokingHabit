@@ -10,6 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import org.richit.easiestsqllib.Datum;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+
+import de.diegruender49.smokinghabit.SmokeStatistic;
 import de.diegruender49.smokinghabit.databinding.FragmentEditBinding;
 
 public class EditFragment extends Fragment {
@@ -31,6 +37,22 @@ public class EditFragment extends Fragment {
         logDate.setText(editViewModel.getDateText());
         logTime.setText(editViewModel.getTimeText());
         logDesc.setText(editViewModel.getDescText());
+
+        binding.saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                SmokeStatistic smstat = new SmokeStatistic(getContext());
+                smstat.getDatabase().updateData(0,editViewModel.getSqlId(),new Datum("reasontag",logDesc.getText().toString()));
+                try {
+                    long tmpdt = DateFormat.getDateTimeInstance().parse(logDate.getText().toString() + " " + logTime.getText().toString()).getTime();
+                    smstat.getDatabase().updateData(0,editViewModel.getSqlId(),new Datum("smoketime",tmpdt));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         return root;
     }
 
