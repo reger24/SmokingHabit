@@ -1,4 +1,4 @@
-package de.diegruender49.smokinghabit.ui.home;
+package de.diegruender49.smokinghabit.ui.edit;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,27 +10,27 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import de.diegruender49.smokinghabit.databinding.FragmentHomeBinding;
+import de.diegruender49.smokinghabit.databinding.FragmentEditBinding;
 
 public class EditFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentEditBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        EditViewModel homeViewModel =
-                new ViewModelProvider(this).get(EditViewModel.class);
+        EditViewModel editViewModel =
+                new ViewModelProvider(requireActivity()).get(EditViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentEditBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final EditText logDate = binding.editLogDate;
         final EditText logTime = binding.editLogTime;
         final EditText logDesc = binding.editLogDesc;
 
-        homeViewModel.getText().observe(getViewLifecycleOwner(), logDate::setText);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), logTime::setText);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), logDesc::setText);
+        logDate.setText(editViewModel.getDateText());
+        logTime.setText(editViewModel.getTimeText());
+        logDesc.setText(editViewModel.getDescText());
         return root;
     }
 

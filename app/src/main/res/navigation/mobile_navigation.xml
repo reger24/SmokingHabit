@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="de.diegruender49.smokinghabit.ui.home.EditFragment"
+        android:name="de.diegruender49.smokinghabit.ui.edit.EditFragment"
         android:label="@string/title_edit"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_edit" />
 
     <fragment
         android:id="@+id/navigation_dashboard"

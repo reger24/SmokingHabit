@@ -5,7 +5,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,6 +18,7 @@ import org.richit.easiestsqllib.EasiestDB;
 import java.util.Calendar;
 
 import de.diegruender49.smokinghabit.placeholder.PlaceholderContent;
+import de.diegruender49.smokinghabit.ui.edit.EditViewModel;
 
 /**
  * A fragment representing a list of Items.
@@ -49,9 +50,12 @@ public class LogEntryFragment extends Fragment {
             SmokeStatistic smstat = new SmokeStatistic(getContext());
             EasiestDB easiestDB = smstat.getDatabase();
             Cursor cursor = easiestDB.getSelect("SELECT smoketime, reasontag FROM smokelog WHERE smoketime >= " + cal.getTimeInMillis());
+            EditViewModel homeViewModel =  new ViewModelProvider(requireActivity()).get(EditViewModel.class);
             if (cursor != null && cursor.moveToLast()) {
                 int tmpcnt = 1;
                 do {
+                    // remember 1st entry for edit screen
+                    if (tmpcnt == 1) homeViewModel.setEntryData(cursor.getLong(0),cursor.getString(1));
                     PlaceholderContent.PlaceholderItem item = PlaceholderContent.createPlaceholderItem(tmpcnt++,cursor.getLong(0),cursor.getString(1));
                     PlaceholderContent.addItem(item);
                 } while (cursor.moveToPrevious());
