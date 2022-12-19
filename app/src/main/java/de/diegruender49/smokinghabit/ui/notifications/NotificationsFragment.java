@@ -36,7 +36,7 @@ public class NotificationsFragment extends Fragment {
 //        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         // show last smokelog entries
         Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.HOUR, -(24 * 2));
+        cal.add(Calendar.HOUR, - (24 * 2));
         SmokeStatistic smstat = new SmokeStatistic(getContext());
         EasiestDB easiestDB = smstat.getDatabase();
         Cursor cursor = easiestDB.getSelect("SELECT smoketime, reasontag FROM smokelog WHERE smoketime >= " + cal.getTimeInMillis());
@@ -46,7 +46,7 @@ public class NotificationsFragment extends Fragment {
                 Date ddd = new Date(cursor.getLong(0));
                 String timestr = DateFormat.getDateTimeInstance().format(ddd);
                 String labeltxt = " - " + cursor.getString(1);
-                textView.append(timestr + labeltxt + "\n");
+                textView.append(timestr + labeltxt  + "\n");
             } while (cursor.moveToPrevious());
             textView.append("\n");
             cursor.close();

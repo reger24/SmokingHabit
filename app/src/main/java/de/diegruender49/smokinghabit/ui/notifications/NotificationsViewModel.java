@@ -12,6 +12,7 @@ public class NotificationsViewModel extends ViewModel {
         mText = new MutableLiveData<>();
         mText.setValue("This is notifications fragment");
     }
+    public String getReason() { return "Reason"; }
 
     public LiveData<String> getText() {
         return mText;

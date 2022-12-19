@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="de.diegruender49.smokinghabit.ui.notifications.NotificationsFragment"
+        android:name="de.diegruender49.smokinghabit.LogEntryFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_log_entry_list" />
 </navigation>
